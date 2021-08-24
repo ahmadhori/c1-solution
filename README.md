@@ -12,10 +12,7 @@ This README would normally document whatever steps are necessary to get your app
 
 - Configuration
 
-  Ensure that [AWS CLI](https://aws.amazon.com/cli/) is installed and configured with appropriate AWS credentials with run `aws configure`..
-
   Create a python virtualenv and activate it:
-
   ```
   python3 -m venv venv
   . venv/bin/activate
@@ -26,51 +23,15 @@ This README would normally document whatever steps are necessary to get your app
   ```
   pip install -v -r requirements.txt 
   ```
-
-  Run the setup file:
-
+  Run using python
   ```
-  python setup.py develop
+  python application.py
   ```
 
-- VSCode Configuration
-
-  The content of [.vscode/launch.json]() file is:
+  Running using docker:
 
   ```
-  {
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "Python: FastAPI",
-      "type": "python",
-      "request": "launch",
-      "module": "uvicorn",
-      "args": ["app.main:app", "--reload", "--port", "8000"],
-      "justMyCode": false,
-      "serverReadyAction": {
-        "pattern": "http:\\/\\/\\S+:([0-9]+)",
-        "uriFormat": "http://localhost:%s/docs",
-        "action": "openExternally"
-      }
-    }
-  ]
-  }
-
+  docker build -t c1-solution-image .
+  docker run -p 80:80 c1-solution-image
   ```
 
-- Dependencies
-- Database configuration
-- How to run tests
-- Deployment instructions
-
-## Contribution guidelines
-
-- Writing tests
-- Code review
-- Other guidelines
-
-## Who do I talk to?
-
-- Repo owner or admin
-- Other community or team contact
