@@ -31,9 +31,12 @@ I used fastapi as python framework to do the task
 
 You can run the code using python on your machine or using docker image
 
-- Running using docker:
-
+- build the image:
   ```
   docker build -t c1-solution-image .
+  ```
+
+- Run the container:
+  ```
   docker run -p 80:80 c1-solution-image
   ```
