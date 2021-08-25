@@ -8,7 +8,7 @@ from schema import Commit, Repository
 
 class Github:
     """[summary]
-    This class is reposnsible to communicate with Github API and to return the results
+    This class is responsible for communicating with Github API and to returning the results
     """
 
     search_url = 'https://api.github.com/search/repositories'
