@@ -6,8 +6,9 @@ This README contains the necessary steps to get the application up and running.
 
 - Quick summary
 
-This repo is the solution for the task provided by C1
-I used fastapi as python framework to do the task
+This repo is the solution for the task provided by C1.\
+I used fastapi as python framework to do the task.\
+Python version to implement the solution is Python 3.7
 
 ## Running the application
 
@@ -32,6 +33,7 @@ I used fastapi as python framework to do the task
 You can run the code using python on your machine or using docker image
 
 - build the image:
+
   ```
   docker build -t c1-solution-image .
   ```
