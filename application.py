@@ -18,9 +18,13 @@ templates = Jinja2Templates(directory="templates")
 @app.get("/navigator", response_class=HTMLResponse)
 def search_github(request: Request, search_term: Optional[str] = None):
     github = Github()
-    repos = github.find_repo(query=search_term, sort_key="created_at", reverse=True)[:5]
-    for repo in repos:
-        repo.last_commit = github.get_last_commit(repo)
+    try:
+        repos = github.find_repo(query=search_term, sort_key="created_at", reverse=True)[:5]
+        for repo in repos:
+            repo.last_commit = github.get_last_commit(repo)
+    except requests.exceptions.HTTPError as err:
+        return templates.TemplateResponse("error.html",{"request": request})
+
     return templates.TemplateResponse("template.html",
                                       {"request": request,
                                        "search_term": search_term,
