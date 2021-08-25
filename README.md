@@ -33,9 +33,7 @@ Python version to implement the solution is Python 3.7
 
 - Open a browser and do GET request:
 
-  ```
   http://localhost:9876/navigator?search_term=arrow
-  ```
 
   You can run the code also using docker image
 
@@ -53,6 +51,4 @@ Python version to implement the solution is Python 3.7
 
 - Open a browser and do GET request:
 
-  ```
   http://localhost:9876/navigator?search_term=arrow
-  ```
