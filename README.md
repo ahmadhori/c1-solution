@@ -35,6 +35,10 @@ Python version to implement the solution is Python 3.7
 
   http://localhost:9876/navigator?search_term=arrow
 
+- You can open docs using the link
+
+  http://localhost:9876/docs
+
   You can run the code also using docker image
 
 - build the image:
