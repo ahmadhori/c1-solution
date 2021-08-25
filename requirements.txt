@@ -2,3 +2,4 @@ fastapi[all]
 flake8
 autopep8
 aiofiles
+requests
