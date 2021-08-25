@@ -1,12 +1,10 @@
 import logging
-from typing import Optional
 
 import requests
 import uvicorn
-from fastapi import FastAPI, Request, Query
+from fastapi import FastAPI, Query, Request
 from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
-
 
 from github import Github
 
