@@ -26,11 +26,18 @@ Python version to implement the solution is Python 3.7
   ```
 
 - Run using python
+
   ```
   python application.py
   ```
 
-You can run the code using python on your machine or using docker image
+- Open a browser and do GET request:
+
+  ```
+  http://localhost:9876/navigator?search_term=arrow
+  ```
+
+  You can run the code also using docker image
 
 - build the image:
 
@@ -39,6 +46,13 @@ You can run the code using python on your machine or using docker image
   ```
 
 - Run the container:
+
   ```
-  docker run -p 80:80 c1-solution-image
+  docker run -p 9876:9876 c1-solution-image
+  ```
+
+- Open a browser and do GET request:
+
+  ```
+  http://localhost:9876/navigator?search_term=arrow
   ```
