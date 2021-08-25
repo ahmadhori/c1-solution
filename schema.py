@@ -1,9 +1,7 @@
-from typing import Optional
-from pydantic import BaseModel, Field
 from datetime import datetime
+from typing import Optional
 
-
-
+from pydantic import BaseModel, Field
 
 
 class Commit(BaseModel):
@@ -17,12 +15,10 @@ class Commit(BaseModel):
         super().__init__(**kwargs)
 
 
-
 class Owner(BaseModel):
     html_url: str
     avatar_url: str
     login: str
-
 
 
 class Repository(BaseModel):

@@ -1,12 +1,13 @@
-from github import Github
 import logging
 from typing import List, Optional
+
 import requests
 import uvicorn
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 
+from github import Github
 
 logger = logging.getLogger(__name__)
 
@@ -23,7 +24,7 @@ def search_github(request: Request, search_term: Optional[str] = None):
         for repo in repos:
             repo.last_commit = github.get_last_commit(repo)
     except requests.exceptions.HTTPError as err:
-        return templates.TemplateResponse("error.html",{"request": request})
+        return templates.TemplateResponse("error.html", {"request": request})
 
     return templates.TemplateResponse("template.html",
                                       {"request": request,

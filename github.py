@@ -1,7 +1,9 @@
-from schema import Commit, Repository, Owner
-import requests
 from typing import List
+
+import requests
 from pydantic import parse_obj_as
+
+from schema import Commit, Repository
 
 
 class Github:
@@ -25,4 +27,3 @@ class Github:
             return commit
         else:
             return None
-    
